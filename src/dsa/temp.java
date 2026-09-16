@@ -21,19 +21,19 @@ public class temp {
 //        }
 
         /// Binary Search
-        int[] arr = {10, 20, 30, 40, 50, 60, 70};
+        int[] arr = {10, 20, 30, 40, 50, 60};
         int target = sc.nextInt();
         int left = 0, right = arr.length - 1;
             boolean isFound = false;
         while (left <= right) {
-            int mid = (left + right) / 2;
+           int mid = (left + right) / 2;
             if (arr[mid] == target) {
                 System.out.println("Found");
                 isFound = true;
                 break;
             }
             if (target > arr[mid]) {
-                left = mid + 1;
+               left = mid + 1;
             } else if (target < arr[mid]) {
                 right = mid - 1;
             }

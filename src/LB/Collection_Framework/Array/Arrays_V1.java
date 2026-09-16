@@ -1,7 +1,7 @@
 package LB.Collection_Framework.Array;
 
 import java.util.*;
-public class Array_V1 {
+public class Arrays_V1 {
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
