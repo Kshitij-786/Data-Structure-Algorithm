@@ -46,6 +46,6 @@ public class HwQues {
             for (int i = 0; i < n; i++) {
                 list.add(arr[i]);
             }
-        System.out.println(list);
+        System.out.println(list);*/
     }
 }
