@@ -20,7 +20,7 @@ public class Kadane_Algo {
                 }
             }
         }
-        System.out.println(max)
+        System.out.println(max);
 
     }
 }
