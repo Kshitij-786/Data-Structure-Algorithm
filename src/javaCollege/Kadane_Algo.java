@@ -1,3 +1,4 @@
+/*
 package javaCollege;
 
 import java.util.ArrayList;
@@ -24,3 +25,4 @@ public class Kadane_Algo {
 
     }
 }
+*/

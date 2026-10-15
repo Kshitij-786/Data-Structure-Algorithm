@@ -2,44 +2,33 @@ package dsa;
 
 import java.util.*;
 public class temp {
-    static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        ///  Linear Search
-//        int[] arr = {10, 25, 7, 40, 15, 30};
-//        int target = 15;
-//        boolean isFound = false;
-//        for(int i = 0;i<arr.length;i++){
-//            if(arr[i] == target){
-//                isFound = true;
-//                System.out.println(i);
-//                break;
-//            }
-//            }
-//            if(!isFound){
-//                System.out.println("Not Found");
-//        }
-
-        /// Binary Search
-        int[] arr = {10, 20, 30, 40, 50, 60};
-        int target = sc.nextInt();
-        int left = 0, right = arr.length - 1;
-            boolean isFound = false;
-        while (left <= right) {
-           int mid = (left + right) / 2;
-            if (arr[mid] == target) {
-                System.out.println("Found");
-                isFound = true;
-                break;
-            }
-            if (target > arr[mid]) {
-               left = mid + 1;
-            } else if (target < arr[mid]) {
-                right = mid - 1;
-            }
-        }
-            if (!isFound) {
-                System.out.println("Not Found");
-        }
+static void table2(){
+    for (int i = 1;i<=10;i++){
+        int ans = 2*i;
+        System.out.println("2 * " + i + " = " + ans);
     }
 }
+static void sum_and_diff(int x ,int y){
+    int sum = x+y;
+    System.out.println("Sum: " + sum);
+    int diff = x-y;
+    System.out.println("Diff: " + diff);
+}
+
+static String check(String  x , String y){
+    String ans  = x+y;
+    return ans;
+}
+
+/// Main method
+     static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*System.out.println("Here is call");
+        table2();
+         System.out.println("here is your sum and diff");
+         sum_and_diff(sc.nextInt(),sc.nextInt());*/
+         String result = check("10","15");
+         System.out.println(result);
+    }
+}
+
