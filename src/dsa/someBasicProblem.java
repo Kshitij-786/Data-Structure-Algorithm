@@ -150,5 +150,36 @@ public class someBasicProblem {
             }
     }
 }
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        if (head == null || head.next == null) return true;
 
+        // Pointer 1 & 2: Mid dhoondne ke liye
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        // Pointer 2 (fast) ko reuse kar rahe hain second half reverse karne ke liye:
+        // fast ko prev ki tarah aur slow ko curr ki tarah use kar rahe hain
+        fast = null;
+        while (slow != null) {
+            ListNode nextTemp = slow.next;
+            slow.next = fast;
+            fast = slow;
+            slow = nextTemp;
+        }
+
+        // Pointer 1 (slow) head par aur Pointer 2 (fast) reversed list ke start par
+        slow = head;
+        while (fast != null) {
+            if (slow.val != fast.val) return false;
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return true;
+    }
+}
 
